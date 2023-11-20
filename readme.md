@@ -1,49 +1,49 @@
+### 工具命令：
+
+```
+.
+├── split_after.sh		//合包命令，仓库从github下载后，运行脚本进行合包
+├── split_before.sh		//分包命令，在提交github的之前，运行脚本进行分包，需要手动将分包后的文件一并提交
+```
+
+
+
 ### 工具目的：
 
-解决GitHub仓库平台不能支持100M以上文件问题（超过100M文件只能使用LFS存储，但是费用非常高，土豪可以考虑），在上传前使用本脚本，可以将无限大的文件进行上传，可以达到GitHub仓库最大值100G！
-
-如果你足够聪明，再改造一下，可以将GitHub仓库做成一个免费的云盘，TODO
-
-
-
-### 实现思路：
-
-在上传大文件之前：运行自动分包脚本，会自动检测超过100M以上的文件，并进行文件分割
-
-在下载仓库了之后：运行自动组包脚本，会自动检测需要组包的文件，进行自动组包，进行文件还原
+解决目前Github平台，单文件大小不能超过100MB以上的问题（超过100MB大小的文件只能使用LFS存储，但是费用非常高，土豪可以考虑），在上传前使用工具命令进行分包，从仓库下载后通过命令本地合包，通过这个方法，可以绕过这个限制。当然，如果你足够聪明，可以基于这个脚本继续改造，将Github平台做成自己的云盘，TODO
 
 
 
 ### 使用方法：
 
 ```
-.
-├── build
-│   ├── bl602_harmonyos_docker
-│   ├── hi3861_harmonyos_docker
-│   ├── middleware_ci_docker
-│   └── middleware_docker
-├── docker_env
-│   ├── docker_env.sh
-│   └── Readme.md
-├── docker_install
-│   ├── Readme.md
-│   └── ubuntu_docker_install.sh
-├── github_split
-│   ├── merge_file.sh
-│   ├── split_file.sh
-│   ├── split_log_md5.txt
-│   └── split_log.txt
-└── Readme.md
+将本仓库文件夹完整拷贝到需要进行分包传输的仓库根目录，请看实例：假设我有一个仓库，仓库名称：Github_Root
+
+Github_Root/
+├── .git
+│   ├── branches
+│   ├── config
+│   ├── description
+│   ├── HEAD
+│   ├── hooks
+│   ├── info
+│   ├── objects
+│   └── refs
+└── github_split
+    ├── license-2.0.txt
+    ├── readme.md
+    ├── split_after.sh
+    ├── split_before.sh
+    ├── split_log_md5.txt	//分包后，需要提交仓库，合包时使用
+    └── split_log.txt		//分包后，需要提交仓库，合包时使用
+
 ```
 
 ```
-上传前：
-$ cd ./github_split/ && ./split_file.sh
+$ cd ./github_split/ && ./split_before.sh	//提交前运行
 ```
 
 ```
-下载后：
-$ cd ./github_split/ && ./merge_file.sh
+$ cd ./github_split/ && ./split_after.sh	//下载后运行
 ```
 
