@@ -1,5 +1,1 @@
-./../build/middleware_ci_docker/env_tools/go1.14.2.linux-amd64.tar.gz
-./../build/middleware_ci_docker/env_tools/codingci/tools/jenkins_home.zip
-./../build/hi3861_harmonyos_docker/env_tools/llvm-linux-9.0.0-36191.tar
-./../build/bl602_harmonyos_docker/env_tools/gcc_riscv32.tar.gz
-./../build/bl602_harmonyos_docker/env_tools/llvm-linux-9.0.0-36191.tar
+./../file/toolchain_gcc_t-head_linux-master.zip
