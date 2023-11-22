@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd "$(dirname "$0")"
+
 : >split_log.txt
 : >split_log_md5.txt
 
