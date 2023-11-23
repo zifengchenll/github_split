@@ -60,10 +60,10 @@
 
 
 ```
-$ cd .github_split/ && ./split_before.sh	//提交前运行
+$ cd .github_split/ && ./split_before.sh  //提交前运行
 ```
 
 ```
-$ cd .github_split/ && ./split_after.sh	//下载后运行
+$ cd .github_split/ && ./split_after.sh   //下载后运行
 ```
 
