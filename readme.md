@@ -10,7 +10,7 @@
 ├── file
 │   ├── toolchain_gcc_t-head_linux-master.zip_pkg00
 │   └── toolchain_gcc_t-head_linux-master.zip_pkg01
-├── github_split
+├── .github_split
 │   ├── split_after.sh		//下载后运行合包，删除小包
 │   ├── split_before.sh		//提交前进行分包，生成小包
 │   ├── split_log_md5.txt	//自动生成需提交
@@ -32,7 +32,7 @@
 .
 ├── file
 │   └── toolchain_gcc_t-head_linux-master.zip
-├── github_split
+├── .github_split
 │   ├── split_after.sh		//下载后运行合包，删除小包
 │   ├── split_before.sh		//提交前进行分包，生成小包
 │   ├── split_log_md5.txt	//自动生成需提交
@@ -48,7 +48,7 @@
 ├── file
 │   ├── toolchain_gcc_t-head_linux-master.zip_pkg00
 │   └── toolchain_gcc_t-head_linux-master.zip_pkg01
-├── github_split
+├── .github_split
 │   ├── split_after.sh		//下载后运行合包，删除小包
 │   ├── split_before.sh		//提交前进行分包，生成小包
 │   ├── split_log_md5.txt	//自动生成需提交
@@ -60,10 +60,10 @@
 
 
 ```
-$ cd ./github_split/ && ./split_before.sh	//提交前运行
+$ cd .github_split/ && ./split_before.sh	//提交前运行
 ```
 
 ```
-$ cd ./github_split/ && ./split_after.sh	//下载后运行
+$ cd .github_split/ && ./split_after.sh	//下载后运行
 ```
 
