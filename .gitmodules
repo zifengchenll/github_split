@@ -1,0 +1,3 @@
+[submodule "submodules/split_submodules"]
+	path = submodules/split_submodules
+	url = git@github.com:zifengchenll/split_submodules.git
